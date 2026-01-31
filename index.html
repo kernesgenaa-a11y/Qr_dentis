@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Верховський Олександр Олександрович</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --bg: #020617;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #2dd4bf;
+  --btn: #1e293b;
+  --btn-hover: #334155;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 360px;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  border-radius: 26px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,.7);
+}
+
+.logo {
+  width: 74px;
+  margin-bottom: 18px;
+}
+
+.photo {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 8px 0 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.btn {
+  display: block;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 16px;
+  background: var(--btn);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: .25s ease;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: linear-gradient(135deg, #2dd4bf, #22c55e);
+  color: #022c22;
+}
+
+.footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <!-- ЛОГО -->
+  <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." />
+
+  <!-- ФОТО -->
+  <img class="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." />
+
+  <h1>Верховський<br>Олександр Олександрович</h1>
+  <div class="subtitle">Лікар-стоматолог</div>
+
+  <!-- ДОДАТИ В КОНТАКТИ -->
+  <a class="btn primary" href="
+data:text/vcard;charset=utf-8,
+BEGIN:VCARD
+VERSION:3.0
+N:Верховський;Олександр;Олександрович
+FN:Верховський Олександр Олександрович
+TEL:+380501234567
+URL:https://dentis.pp.ua
+END:VCARD
+">
+➕ Додати в контакти
+  </a>
+
+  <!-- ОПЛАТА -->
+  <a class="btn" href="https://www.ipay.ua/ua/request/77gfvrz-mohsoy9grs8tiulbx2dqtydr">
+💳 Оплатити послуги
+  </a>
+
+  <!-- НАГАДУВАННЯ -->
+  <a class="btn" href="
+data:text/calendar;charset=utf-8,
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Візит до Верховського О.О.
+DTSTART:20260201T120000
+DTEND:20260201T130000
+END:VEVENT
+END:VCALENDAR
+">
+📅 Додати нагадування
+  </a>
+
+  <!-- САЙТ -->
+  <a class="btn" href="https://dentis.pp.ua">
+🌐 Перейти на сайт
+  </a>
+
+  <div class="footer">Dentis • сучасна стоматологія</div>
+
+</div>
+
+</body>
+</html>
