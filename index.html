@@ -34,11 +34,14 @@ body {
   padding: 28px;
   text-align: center;
   box-shadow: 0 40px 80px rgba(0,0,0,.7);
+  position: relative;
+  overflow: hidden;
 }
 
+
 .logo {
-  width: 320px;
-  margin-bottom: 7px;
+  width: 300px;
+  margin-bottom: 3px;
 }
 
 
@@ -82,12 +85,42 @@ h1 {
   font-size: 12px;
   color: var(--muted);
 }
+
+@keyframes pulseLogo {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.035;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 0.06;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.035;
+  }
+}
+
+.bg-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  max-width: 520px;
+  pointer-events: none;
+  animation: pulseLogo 14s ease-in-out infinite;
+  filter: blur(0.3px);
+}
+
+
 </style>
 </head>
 
 <body>
 
 <div class="card">
+  <img class="bg-logo"
+src="image/Dentis.webp">
 
   <!-- ЛОГО -->
   <img class="logo" src="image/Dentis_with_Text.webp" />
