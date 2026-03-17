@@ -7,19 +7,30 @@
 
 <style>
 :root {
+  --primary: 180 50% 15%;
+  --primary-foreground: 40 30% 97%;
+  --accent: #2dd4bf;
+  --accent-foreground: 0 0% 100%;
+  --gold: 38 62% 52%;
+  --gold-light: 38 70% 68%;
+  --gold-dark: 38 55% 38%;
+  --navy: 180 60% 25%;
   --bg: #020617;
   --card: #0f172a;
   --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #2dd4bf;
+  --muted: 40 20% 93%;
   --btn: #1e293b;
   --btn-hover: #334155;
+  --gradient-hero: linear-gradient(135deg, hsl(180 60% 20%) 0%, hsl(180 55% 28%) 60%, hsl(180 50% 35%) 100%);
+  --gradient-section: linear-gradient(180deg, hsl(183, 61%, 15%) 0%, hsl(171, 70%, 30%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(38, 80%, 65%) 0%, hsl(38, 75%, 72%) 60%, hsl(38, 70%, 76%) 100%);
+  --gradient-golden: linear-gradient(135deg, hsl(38, 80%, 65%) 0%, hsl(38, 75%, 72%) 60%, hsl(38, 70%, 76%) 100%);
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617);
+  background: linear-gradient(to right, #133939 17%, #196666 49%);
   color: var(--text);
   display: flex;
   justify-content: center;
@@ -29,7 +40,7 @@ body {
 
 .card {
   width: 360px;
-  background: linear-gradient(180deg, #0f172a, #020617);
+   background: linear-gradient(to bottom left, #133939 0%, #196666 78%);
   border-radius: 26px;
   padding: 28px;
   text-align: center;
@@ -40,7 +51,7 @@ body {
 
 
 .logo {
-  width: 280px;
+  width: 250px;
   margin-bottom: 3px;
 }
 
@@ -63,11 +74,12 @@ h1 {
   padding: 15px;
   margin: 12px 0;
   border-radius: 16px;
-  background: var(--btn);
+  background: radial-gradient( circle 1047px at 24.8% 71.8%, rgba(204,153,0,1) 35.5%, rgba(253,216,53,1) 100.1% );
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
   transition: .25s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,.7);
 }
 
 .btn:hover {
@@ -76,8 +88,14 @@ h1 {
 }
 
 .primary {
-  background: linear-gradient(135deg, #2dd4bf, #22c55e);
-  color: #022c22;
+  background: linear-gradient(135deg, #ae8327, #ddaf27);
+  
+  
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, #977d38, #e6c148);
+  
 }
 
 .footer {
@@ -89,15 +107,15 @@ h1 {
 @keyframes pulseLogo {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.035;
+    opacity: 0.055;
   }
   50% {
     transform: translate(-50%, -50%) scale(1.06);
-    opacity: 0.06;
+    opacity: 0.1;
   }
   100% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.035;
+    opacity: 0.055;
   }
 }
 
@@ -105,10 +123,10 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120%;
+  width: 100%;
   max-width: 480px;
   pointer-events: none;
-  animation: pulseLogo 2s ease-in-out infinite;
+  animation: pulseLogo 3s ease-in-out infinite;
   filter: blur(0.5px);
 }
 
@@ -123,7 +141,7 @@ h1 {
 src="image/Dentis.webp">
 
   <!-- ЛОГО -->
-  <img class="logo" src="image/Dentis_with_Text.png" />
+  <img class="logo" src="image/Dentis_with_Text.webp" />
 
   
 
@@ -139,23 +157,32 @@ src="image/Dentis.webp">
  Додати в контакти
   </a>
 
-  <!-- ОПЛАТА -->
-  <a class="btn" href="https://www.ipay.ua/ua/request/77gfvrz-mohsoy9grs8tiulbx2dqtydr">
-💳 Оплатити послуги
+
+  <!--Підписка на бота-->
+  <a class="btn" href="https://t.me/dentis_notif_bot?start">
+   ⏰ Нагадування про візит
   </a>
-
-  <!-- НАГАДУВАННЯ -->
-  <a class="btn" href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0APRODID:-//Reminder//UA//EN%0D%0ABEGIN:VEVENT%0D%0ASUMMARY:Візит%20до%20Верховського%20О.О.%0D%0ADTSTART:20260201T120000%0D%0ADTEND:20260201T130000%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR">
-📅 Додати нагадування
-</a>
-
 
   <!-- САЙТ -->
   <a class="btn" href="https://dentis.kr.ua">
 🌐 Перейти на сайт
   </a>
 
-  <div class="footer">Dentis • сучасна стоматологія</div>
+
+  <!-- НАГАДУВАННЯ -->
+  <a class="btn" href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0APRODID:-//Reminder//UA//EN%0D%0ABEGIN:VEVENT%0D%0ASUMMARY:Візит%20до%20Верховського%20О.О.%0D%0ADTSTART:20260201T120000%0D%0ADTEND:20260201T130000%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR">
+📅 Додати в календар
+</a>
+
+
+
+    <!-- ОПЛАТА -->
+  <a class="btn" href="https://send.monobank.ua/jar/2JbpBYkhMv">
+💳 Задонатити на Русоріз
+  </a>
+
+
+  <div class="footer">Дентіс • сучасна стоматологія</div>
 
 </div>
 
