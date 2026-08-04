@@ -37,13 +37,19 @@ body {
   font-family: "Manrope", system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   background-color: #f8fafc;
-  background-image: url('image/bg-fluid.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('image/bg-fluid.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -54,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 15px);
 }
 
 /* Header pill like dynamic island */
@@ -83,7 +89,7 @@ body {
 
 .brand-info {
   text-align: center;
-  margin-top: clamp(30px, 5dvh, 40px);
+  margin-top: clamp(15px, 3dvh, 25px);
   padding: 0 20px;
   animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
@@ -91,34 +97,34 @@ body {
 .brand-name {
   margin: 0;
   color: var(--text-primary);
-  font-size: clamp(2rem, 7vw, 2.5rem);
-  font-weight: 800;
+  font-size: clamp(1.8rem, 6vw, 2.2rem);
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .brand-subtitle {
-  margin: 8px 0 0;
+  margin: 4px 0 0;
   color: var(--text-secondary);
-  font-size: clamp(0.95rem, 4vw, 1.1rem);
+  font-size: clamp(0.9rem, 3.5vw, 1.05rem);
   font-weight: 500;
   line-height: 1.4;
 }
 
 .actions {
   display: grid;
-  gap: 16px;
-  margin-top: clamp(40px, 8dvh, 60px);
+  gap: clamp(10px, 2dvh, 14px);
+  margin-top: clamp(20px, 5dvh, 35px);
   padding: 0 24px;
   animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 .action {
   width: 100%;
-  min-height: 80px;
+  min-height: clamp(64px, 9dvh, 76px);
   display: flex;
   align-items: center;
-  padding: 12px 24px 12px 14px;
+  padding: 10px 20px 10px 12px;
   background: var(--glass-bg);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -153,15 +159,15 @@ body {
 
 .action-icon {
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.9);
   color: var(--icon-color);
-  margin-right: 18px;
+  margin-right: 14px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
   transition: all 0.3s ease;
 }
@@ -190,7 +196,7 @@ body {
 .action-label {
   color: var(--text-primary);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -204,14 +210,14 @@ body {
   margin-top: auto;
   display: flex;
   justify-content: center;
-  gap: 16px;
-  padding-top: clamp(40px, 8dvh, 60px);
+  gap: 12px;
+  padding-top: clamp(20px, 5dvh, 40px);
   animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
 
 .social-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   background: var(--glass-bg);
@@ -232,8 +238,8 @@ body {
 }
 
 .social-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   stroke: currentColor;
   stroke-width: 1.5;
   stroke-linecap: round;
@@ -242,10 +248,10 @@ body {
 }
 
 .footer {
-  padding: 20px;
+  padding: 10px 20px;
   color: var(--text-secondary);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+    font-weight: 600;
   text-align: center;
   animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
 }
