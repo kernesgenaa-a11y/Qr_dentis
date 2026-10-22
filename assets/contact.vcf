@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Дентіс — стоматологічна клініка
+ORG:Дентіс
+TEL;TYPE=WORK,VOICE:+380991234567
+ADR;TYPE=WORK:;;вул. Героїв-рятувальників\, 9\, корп. 2;Кропивницький;;;Україна
+URL:https://dentis.kr.ua
+END:VCARD

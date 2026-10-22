@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Dentis//Appointment//UK
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:e5dc79f6-99d3-4e4b-bb24-04380fda1eb0@dentis.kr.ua
+DTSTAMP:20261022T155449Z
+DTSTART:20261022T165449Z
+DTEND:20261022T175449Z
+SUMMARY:Прийом у стоматологічній клініці Дентіс
+LOCATION:Кропивницький\, вул. Героїв-рятувальників\, 9\, корп. 2
+DESCRIPTION:Вкажіть погоджені з клінікою дату та час. Телефон: +380991234567.
+END:VEVENT
+END:VCALENDAR
