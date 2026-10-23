@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preload" href="assets/hero.webp" as="image" fetchpriority="high" />
   <meta
     name="description"
     content="Дентіс — сучасна стоматологія у Кропивницькому"
@@ -14,14 +15,14 @@
       font-style: normal;
       font-weight: 400;
       font-display: swap;
-      src: url("assets/manrope-regular.ttf") format("truetype");
+      src: url("assets/manrope-regular.woff2") format("woff2");
     }
     @font-face {
       font-family: "Cormorant Garamond";
       font-style: normal;
       font-weight: 500;
       font-display: swap;
-      src: url("assets/cormorant-garamond-medium.ttf") format("truetype");
+      src: url("assets/cormorant-garamond-medium.woff2") format("woff2");
     }
     :root {
       --ink: #f0f5ef;
@@ -35,7 +36,7 @@
     }
     body {
       margin: 0;
-      background: var(--black) url(assets/general.png) center/cover fixed;
+      background: var(--black) url(assets/general.webp) center/cover fixed;
       color: var(--ink);
       font-family: "Manrope", sans-serif;
       padding: 45px 16px;
@@ -57,7 +58,7 @@
       position: absolute;
       z-index: -1;
       inset: 0;
-      background: url(assets/hero.png) center top/100% auto no-repeat;
+      background: url(assets/hero.webp) center top/100% auto no-repeat;
       opacity: 0.95;
     }
     .brand {
@@ -125,7 +126,7 @@
       justify-content: space-between;
       text-decoration: none;
       color: #00201d;
-      background: #27e4cd url(assets/button.png) center/cover;
+      background: #27e4cd url(assets/button.webp) center/cover;
       border-radius: 60px;
       padding: 10px 10px 10px 42px;
       font-size: 48px;
@@ -170,16 +171,16 @@
       border-radius: 6px;
     }
     .action:nth-child(1) {
-      background-image: url(assets/contact.png);
+      background-image: url(assets/contact.webp);
     }
     .action:nth-child(2) {
-      background-image: url(assets/telegram.png);
+      background-image: url(assets/telegram.webp);
     }
     .action:nth-child(3) {
-      background-image: url(assets/website.png);
+      background-image: url(assets/website.webp);
     }
     .action:nth-child(4) {
-      background-image: url(assets/calendar.png);
+      background-image: url(assets/calendar.webp);
     }
     .icon {
       display: grid;
@@ -778,7 +779,7 @@
         flex-shrink: 0;
       }
       .action:nth-child(4) {
-        background-image: url(assets/calendar.png);
+        background-image: url(assets/calendar.webp);
         background-color: #7b938b;
       }
       .hero-index {
@@ -792,7 +793,7 @@
       }
     }
     .action:nth-child(4) {
-      background-image: url(assets/calendar.png);
+      background-image: url(assets/calendar.webp);
       background-blend-mode: normal;
       background-color: #020b0a;
     }
@@ -930,10 +931,12 @@
     .cta:hover {
       filter: brightness(1.04);
     }
-    body {
-      background: var(--black) url("assets/11.webp") center/cover no-repeat
-        fixed;
-      min-height: 100svh;
+    @media (min-width: 601px) {
+      body {
+        background: var(--black) url("assets/11.webp") center/cover no-repeat
+          fixed;
+        min-height: 100svh;
+      }
     }
     .hero p,
     .label {
@@ -944,16 +947,16 @@
       letter-spacing: -0.3px;
     }
     .actions .action:nth-child(1) {
-      --card-photo: url("assets/contact.png");
+      --card-photo: url("assets/contact.webp");
     }
     .actions .action:nth-child(2) {
-      --card-photo: url("assets/telegram.png");
+      --card-photo: url("assets/telegram.webp");
     }
     .actions .action:nth-child(3) {
-      --card-photo: url("assets/website.png");
+      --card-photo: url("assets/website.webp");
     }
     .actions .action:nth-child(4) {
-      --card-photo: url("assets/calendar.png");
+      --card-photo: url("assets/calendar.webp");
     }
     .actions .action {
       --card-smoke: color-mix(in srgb, var(--teal) 12%, transparent);
@@ -1003,6 +1006,13 @@
         top: calc(50% + 21.5px);
       }
     }
+    @media (max-width: 600px) and (max-height: 739px) {
+      .page {
+        height: calc(100svh - 24px);
+        min-height: 0;
+        overflow-y: auto;
+      }
+    }
   </style>
   </head>
   <body>
@@ -1034,7 +1044,7 @@
         ><span class="icon"><img src="assets/phone.svg" alt="" /></span
         ><span
           ><span class="label">Контакти</span
-          ><span class="desc">Зателефонуйте нам<br /></span></span
+          ><span class="desc">Додайте в<br />контакти</span></span
         ><span class="number">01</span
         ><span class="arrow" aria-hidden="true">→</span></a
       >
@@ -1042,7 +1052,7 @@
         ><span class="icon"><img src="assets/telegram.svg" alt="" /></span
         ><span
           ><span class="label">Telegram-бот</span
-          ><span class="desc">Швидкі відповіді<br />та запис</span></span
+          ><span class="desc">Швидкі<br />відповіді</span></span
         ><span class="number">02</span
         ><span class="arrow" aria-hidden="true">→</span></a
       >
